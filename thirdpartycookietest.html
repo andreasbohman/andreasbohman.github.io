@@ -3,14 +3,8 @@
 <head></head>
 <body>
 <script>
- if (window.parent) {
-	if (/thirdparty=yes/.test(document.cookie)) {
-		window.parent.postMessage('3PCsupported', '*');
-	} else {
-		window.parent.postMessage('3PCunsupported', '*');
-	}
-	document.cookie = 'thirdparty=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
- }
+	document.cookie="thirdparty=yes; Max-Age=3600; SameSite=None; Secure";
+	document.location="thirdpartycookietest_complete.html";
 </script>
 </body>
 </html>
